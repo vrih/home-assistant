@@ -22,3 +22,4 @@ make -j$(nproc)
 
 # Install the binaries/libraries to your local system (prefix is /usr/local)
 make install
+

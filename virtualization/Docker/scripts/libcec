@@ -29,7 +29,7 @@ git submodule update --init src/platform
     mkdir -p src/platform/build
     cd src/platform/build
     cmake ..
-    make
+    make -j8
     make install
 )
 
@@ -41,7 +41,9 @@ git submodule update --init src/platform
         -DPYTHON_LIBRARY="${PYTHON_LIBRARY}" \
         -DPYTHON_INCLUDE_DIR="${PYTHON_INCLUDE_DIR}" \
         ..
+
     make -j$(nproc)
     make install
     ldconfig
 )
+
